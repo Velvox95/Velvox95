@@ -1,0 +1,64 @@
+VELVOX IS HERE GUYS LONG TIME NO SEE SO TODAY HERE UR TEACHER HE IS TSM_LOBBY 
+TSM_LOBBY hello guys this is an guide by me and this lesson about ac ships change 
+Mod Guide for AC4
+Changing Jackdaw to Nosso:
+Decompress Jackdaw.data and Nosso.data.
+Delete all files in Jackdaw.data, but first export 0_-_SHP_BRG_Jackdaw.EntityGroupBuilder and copy the EntityGroupBuilder ID (found at the top of the file).
+Copy all files from Nosso.data to Jackdaw.data.
+Export 0_-_SHP_MOW_Nosso.EntityGroupBuilder and replace the Nosso EntityGroupBuilder ID with Jackdaw's ID, then import the file.
+Repack everything, and it's done.
+Fixing Nosso Errors (Cannon Sound, Cannon Shot Collision, Travel Speed, Ship Boarding):
+To fix errors, edit 6_-_SHP_MOW_Nosso_BaseEntity_Group.EntityGroup with HEX (complicated, use another fixed mod file for MOW).
+Reviving the Mortar (Example for Impoluto):
+Export ??_-_SHP_MOW_Impoluto_Cannons_Mortar_Right.EntityGroupBuilder and ??_-_SHP_MOW_Nosso_Cannons_Mortar_Right.EntityGroupBuilder.
+Open the files and swap the BuildTableRef and EntityRef IDs in the Impoluto file with those from Nosso (found at the bottom).
+Do the same for the left mortar file.
+Import, repack, and it's done.
+Enable the Swivel Gun for Other MOW:
+Export the edited ??_-_SHP_MOW_Nosso_Deck_DK.EntityGroupBuilder file and the original (unedited) file.
+Open the files, copy the last <BuildColumn> from the unedited file, and paste it after the last <BuildColumn> in the edited file.
+Copy the last <DynamicProperty> from ??_-_SHP_MOW_Nosso_Deck_DK.EntityGroupBuilder in the unedited file.
+Insert this in the edited file after the last <DynamicProperty>, import the edited file back.
+Repack everything, and it's done.
+Changing to Another Ship:
+Locate and decompress the .data file of the ship you want to change to.
+Copy all files of the ship to Jackdaw.data, ensuring the Nosso EntityGroupBuilder starts with 0_-_ and the other ship's EntityGroupBuilder starts with 1_-_.
+Export the Hull_HL, Bow_BW, Deck_DK files from both Nosso and the other ship, open them all, replace all content in Nosso files with those from the other ship, except the EntityGroupBuilder ID from Nosso (found at the top).
+Repack everything, and it's done.
+Making Legendary Ships Scalable (Custom Ship Models Are Not Scalable Yet):
+For example, take Impoluto, decompress ??_-_SHP_MOW_Impoluto_Hull_Rudder.EntityGroupBuilder and ??_-_SHP_MOW_Impoluto_Hull_Lower.EntityGroupBuilder and the same files from Nosso.
+In Impoluto's data, swap the BuildTableRef and EntityRef IDs with Nosso's IDs (found at the bottom).
+Import the two files.
+Repack everything, and it's done.
+How to Make Long-Range Cannons or Just Edit Cannons:
+Export all Nosso_??.NavalAmmoSettingsRef files.
+Edit maxfiringdistance to make them long-range and spread for mortars, Vollycount for more cannons.
+Change the Front Camera of Cannons:
+Decompress 51_-_Game_Bootstrap_Settings.data.
+Open 10937_-_Nosso_Right_Front_Cannons_CR.ICameraRule and 10936_-_Nosso_Left_Front_Cannons_CR.ICameraRule with HxD.
+Open 10930_-_Jackdaw_Front_Right_Cannon_CR.ICameraRule and 10929_-_Jackdaw_Front_Left_Cannon_CR.ICameraRule also with HxD.
+Overwrite all contents of Jackdaw.ICameraRule with Nosso.ICameraRule contents except the first 6 bytes, and pay attention to left and right.
+Repack everything, and it's done.
+Remove the Rear Lamps of the Ship (As Seen on HMS Prince, Royal Sovereign, and HMS Fearless):
+Search for "Lamp" in AnvilToolkit (in Jackdaw.data) and you should see 6 files:
+??_-_SHP_MOW_Nosso_Props_Lamp_02A.EntityGroupBuilder
+??_-_SHP_SHR_Prop_Lamp_02A.Entity
+??_-_SHP_MOW_COM_PPos_Lamp_02A.Entity
+??_-_SHP_SHR_Prop_Lamp_02A.LODSelector
+??_-_FX_Share_Ship_Lamp2AFlare_Spawner.FX
+??_-_GFX_Shared_Ship_Lamp_02B_Flare.Entity
+Simply delete the 6 files.
+Repack everything, and it's done.
+Change Nosso's Green and Dark Green Material:
+Unpack and open with Notepad++, and unpack the material of the ship you want to replace, for example, dark brown.
+Open with Notepad++ and copy everything in the dark brown material except the top ID, go to the worn green and dark green material, and paste everything you copied from dark brown.
+Save, repack the green and dark green materials, and it's done.
+Make NPC Legendary Ships:
+To do this, export 2 0_-_entitygroupbuilder files and the one for the ship you want to replace.
+Copy the EntityGroupBuilder ID and paste it into the ship you want to swap.
+Change Sails on a Ship (MOW):
+You need to edit the sails, for example, those of the Royal Fortune. Search for "sail" and look for mizzenmast, mainmast, foremast, and copy everything except the EntityGroupBuilder ID and paste it into Nosso and the ship you're making.
+Then go to deck and copy from the ship, for example, royal_fortune_deck, copy the mizzenmast, mainmast, foremast, and paste it into Nosso.
+Add Parts from Different Ships:
+Edit Deck_dk or cc, Hull_hl, bow_bw depending on which part you want to add. Copy everything from the file you want to add, for example, Impoluto's ram to the Black Lady, export bow_bw from both and copy everything from Impoluto except the EntityGroupBuilder ID and paste it into black_deck_dk (everything except the ID).
+Finally, copy all files of the ship part you want to add and rename 0_entitygroupbuilder to 1.
