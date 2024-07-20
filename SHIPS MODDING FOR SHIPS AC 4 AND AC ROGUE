@@ -60,5 +60,9 @@ Change Sails on a Ship (MOW):
 You need to edit the sails, for example, those of the Royal Fortune. Search for "sail" and look for mizzenmast, mainmast, foremast, and copy everything except the EntityGroupBuilder ID and paste it into Nosso and the ship you're making.
 Then go to deck and copy from the ship, for example, royal_fortune_deck, copy the mizzenmast, mainmast, foremast, and paste it into Nosso.
 Add Parts from Different Ships:
+Guys if u can understand this ok or not soon i will make an vid guys dont worry and 
 Edit Deck_dk or cc, Hull_hl, bow_bw depending on which part you want to add. Copy everything from the file you want to add, for example, Impoluto's ram to the Black Lady, export bow_bw from both and copy everything from Impoluto except the EntityGroupBuilder ID and paste it into black_deck_dk (everything except the ID).
 Finally, copy all files of the ship part you want to add and rename 0_entitygroupbuilder to 1.
+
+AND MAIN THING GIVE KIDDOS TO MR.TSM_LOBBY CAUSE BECAUSE OF HOM THIS GUIDE IS OUT 
+AND MAIN THING IS GUYS SUB MY CHANNEL https://www.youtube.com/@velvoxstudios AND U CAN JOIN US ON DISCORD IF U STILL HAVE ANY ISSUES OR Q ABOUT MODDING OR FOR FUN U CAN JOIN MY SERVER https://discord.gg/vxE4jcGf 
